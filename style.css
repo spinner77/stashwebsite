@@ -1,0 +1,235 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #fbf7ec;
+}
+
+.background-image {
+  background-image: url('images/istockphoto-2183384952-612x612.jpg');
+  background-size: auto;
+  background-position: center top; /* Adjust the position to raise the image */
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.header, .nav, .form {
+  position: relative;
+  z-index: 1; /* Ensure forms and other content are above the image */
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between logo/h1 and nav */
+  padding: 0 20px; /* Add some padding to the header */
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0px, 10px,10px, 10px;
+  width: 150px;
+  height: 100px;
+  background-image: url('images/logo_no_background.png');
+  background-size: cover;
+  background-position: left;
+  z-index: -1;
+}
+
+h1 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 48px; /* Adjust the font size as needed */
+  margin: 0, 0, 0, 10px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav a {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Set text color to black */
+  margin-left: 20px; /* Add space between links */
+  font-family: 'Amatic SC', cursive;
+  font-size: 24px; /* Adjust the font size as needed */
+}
+
+.hamburger-menu {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.hamburger-menu span {
+  height: 3px;
+  width: 25px;
+  background-color: black;
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .nav a {
+    display: none; /* Hide nav links on small screens */
+  }
+  .hamburger-menu {
+    display: flex; /* Show hamburger menu on small screens */
+  }
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+}
+
+.combined-container {
+  display: flex;
+  background: rgba(255, 255, 255, 0.171); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border-radius: 10px;
+  padding: 5px;
+  margin: 10px;
+  width: 600px; /* Adjust width as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-section {
+  background-color: #be6c4898; /* Same background color as the form button */
+  border-radius: 10px 0 0 10px; /* Rounded corners on the left side */
+  padding: 20px;
+  width: 50%; /* Adjust width as needed */
+  color: white; /* Set text color to white */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Ensure the image is positioned correctly */
+  z-index: 0; /* Ensure the background color is behind the image */
+}
+
+.welcome-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px 0 0 10px; /* Match the border radius of the container */
+  z-index: 1; /* Send the image to the back */
+}
+
+.welcome-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container */
+  border-radius: 10px 0 0 10px; /* Match the border radius of the container */
+}
+
+.welcome-section p {
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font to paragraph text */
+  font-size: 16px; /* Adjust the font size as needed */
+  margin: 0; /* Remove default margin */
+  position: relative;
+  z-index: 1; /* Ensure text is above the image */
+}
+
+.more-info-button {
+  border: none; /* Remove border */
+  border-radius: 25px; /* Make the button lozenge-shaped */
+  padding: 10px 20px; /* Add padding for better appearance */
+  background-color: #81513a; /* Set background color */
+  color: white; /* Set text color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  margin-top: 20px; /* Add space above the button */
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  position: relative;
+  z-index: 1; /* Ensure button is above the image */
+}
+
+.register-form {
+  width: 50%; /* Adjust width as needed */
+  margin: 0; /* Remove margins */
+  padding-left: 10px; /* Add padding to the left */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form {
+  background: rgba(255, 255, 255, 0.171); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px; /* Adjust width as needed */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center the content */
+  position: relative; /* Ensure the image is positioned correctly */
+  height: 35%;
+}
+
+.login-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px; /* Match the border radius of the container */
+  z-index: -1; /* Send the image to the back */
+}
+
+.login-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container */
+  border-radius: 10px; /* Match the border radius of the container */
+}
+
+.form input, .form button {
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font to form elements */
+  position: relative;
+  z-index: 1; /* Ensure form elements are above the image */
+}
+
+form input {
+  border: none; /* Remove border */
+  border-radius: 25px; /* Make the input boxes lozenge-shaped */
+  padding: 10px 20px; /* Add padding for better appearance */
+  margin-bottom: 10px; /* Add space between input boxes */
+  width: calc(100% - 40px); /* Adjust width to fit within the form */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+}
+
+.form button {
+  border: none; /* Remove border */
+  border-radius: 25px; /* Make the button lozenge-shaped */
+  padding: 10px 20px; /* Add padding for better appearance */
+  background-color: #be6b48; /* Set background color */
+  color: white; /* Set text color */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  width: 100%; /* Full width button */
+  z-index: 1; /* Ensure button is above the form elements */
+}
+
+h2 {
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px; /* Adjust the font size as needed */
+  margin-bottom: 50px; /* Add space between heading and form elements */
+  position: relative;
+  z-index: 1; /* Ensure heading is above the image */
+}

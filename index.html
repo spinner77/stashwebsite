@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sort My Stash</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="background-image"></div>
+    <div class="header">
+        <div class="logo"></div>
+        <h1>Sort My Stash</h1>
+        <div class="nav">
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="contact.php">Contact</a>
+            <div class="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+    <div class="form-container">
+        <div class="combined-container">
+            <div class="welcome-section">
+                <div class="welcome-image-container">
+                    <img src="images\border.png" alt="Welcome Image" class="welcome-image">
+                </div>
+                <h2>Welcome!</h2>
+                <p>Join our community and start organizing your stash today. Register now to enjoy all the features we offer!</p>
+                <button class="more-info-button">More Info</button>
+            </div>
+            <div class="form register-form">
+                <h2>Register</h2>
+                <form action="register.php" method="post">
+                    <input type="text" name="username" placeholder="Username" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="password2" placeholder="Confirm Password" required>
+                    <button type="submit" name="register">Register</button>
+                </form>
+            </div>
+        </div>
+        <div class="form login-form">
+            <div class="login-image-container">
+                <img src="images\border.png" alt="border" class="login-image">
+            </div>
+            <h2>Login</h2>
+            <form action="login.php" method="post">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <button type="submit" name="login">Login</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
