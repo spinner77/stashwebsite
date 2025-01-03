@@ -85,6 +85,13 @@ h1 {
   }
 }
 
+main {
+  flex: 1; /* Allow main content to grow and take available space */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 .form-container {
   display: flex;
   justify-content: center;
@@ -238,7 +245,7 @@ h2 {
   background-color: #be6b48; /* Set background color */
   color: white; /* Set text color */
   text-align: left; /* Align text to the left */
-  padding: 20px; /* Add padding */
+  padding: 10px 20px; /* Add padding */
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -249,10 +256,11 @@ h2 {
 .footer {
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .footer-logo {
-  margin-right: 20px; /* Add some space between the logo and the text */
+  margin-right: 5px; /* Add some space between the logo and the text */
 }
 
 .footer-logo img {
@@ -267,13 +275,15 @@ h2 {
 .footer-nav a {
   color: white; /* Set link color */
   text-decoration: none; /* Remove underline */
-  margin-right: 10px; /* Add space between links */
+  margin-right: 20px; /* Add space between links */
   font-family: 'Roboto', sans-serif;
 }
 
 .footer-contact p {
   margin: 0; /* Remove default margin */
   font-family: 'Roboto', sans-serif;
+  font-size: 10px; /* Adjust the font size as needed */
+  margin-top: 20px;
 }
 
 .content {
