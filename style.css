@@ -327,3 +327,7 @@ h2 {
   color: #f1e8e8; /* Set caption text color */
 }
 
+.section.right {
+  max-height: 100vh; /* Set maximum height to the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
