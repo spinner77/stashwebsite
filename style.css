@@ -87,6 +87,39 @@ h1 {
   }
 }
 
+.sidebar-container {
+  display: flex;
+  flex: 1; /* Allow container to grow and take available space */
+}
+
+.sidebar {
+  width: 200px; /* Set the width of the sidebar */
+  background-color: #f0f0f0; /* Set background color */
+  padding: 20px; /* Add padding */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle drop shadow */
+}
+
+.sidebar-nav ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+.sidebar-nav li {
+  margin-bottom: 10px; /* Add space between links */
+}
+
+.sidebar-nav a {
+  text-decoration: none; /* Remove underline */
+  color: black; /* Set text color */
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px; /* Adjust the font size as needed */
+}
+
+.content {
+  flex: 1; /* Allow content to grow and take available space */
+  padding: 20px; /* Add padding */
+}
+
 main {
   flex: 1; /* Allow main content to grow and take available space */
   display: flex;
@@ -251,6 +284,8 @@ h2 {
   width: 100%;
   display: flex;
   align-items: center;
+  height: 60px; /* Set fixed height */
+  flex-shrink: 0; /* Prevent the footer from shrinking */
 }
 
 .footer {
