@@ -2,6 +2,24 @@
 
 const yarnArray = [];
 
+renderYarnList();
+
+function renderYarnList() {
+
+  let yarnListHTML = '';
+
+  for (let i = 0; i < yarnArray.length; i++) {
+    const yarn = yarnArray[i];
+    const html = `<p>${yarn}</p>`;
+    yarnListHTML += html;
+  }
+
+  console.log(yarnListHTML);
+
+  document.querySelector('.js-yarn-list').innerHTML = yarnListHTML;
+
+}
+
 function addYarn() {
   // Get values from the input fields
   const yarnNameElement = document.querySelector('.js-yarn-name-input');
@@ -45,7 +63,6 @@ function addYarn() {
   document.querySelector('.js-yarn-amount-input').value = '';
   document.querySelector('.js-yarn-fiber-input').value = '';
   document.querySelector('.js-yarn-brand-input').value = '';
+  renderYarnList();
 }
-
-
 

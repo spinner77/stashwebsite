@@ -7,18 +7,35 @@
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Welcome User!</h1>
+  <h1 class="welcome-user">Welcome User!</h1>
   <p>Your stash is looking pretty empty right now.  Click on the add yarn button to start adding to your stash!</p>
-  <input placeholder="Yarn Name" class="js-yarn-name-input">
-  <input placeholder="Yarn Weight" class="js-yarn-weight-input">
-  <input placeholder="Yarn Color" class="js-yarn-color-input">
-  <input placeholder="Yarn Amount" class="js-yarn-amount-input">
-  <input placeholder="Yarn Fiber" class="js-yarn-fiber-input">
-  <input placeholder="Yarn Brand" class="js-yarn-brand-input">
-  <button onclick ="
-  addYarn();
-  " class="js-add-yarn-button">Add Yarn</button>
-  <p class="js-yarn-list"></p>
+  <div class="yarn-input-form">
+    <form>
+      <label>
+        <input type="text" placeholder="Yarn Name" class="js-yarn-name-input">
+      </label> 
+      <label> 
+        <input placeholder="Yarn Weight" class="js-yarn-weight-input">
+      </label> 
+      <label>
+        <input placeholder="Yarn Color" class="js-yarn-color-input">
+      </label> 
+      <label>
+        <input placeholder="Yarn Amount" class="js-yarn-amount-input">
+      </label> 
+      <label>
+        <input placeholder="Yarn Fiber" class="js-yarn-fiber-input">
+      </label> 
+      <label>
+        <input placeholder="Yarn Brand" class="js-yarn-brand-input">
+      </label> 
+      <button onclick ="
+      addYarn();
+      " class="js-add-yarn-button add-yarn-button" >Add Yarn</button>
+    </form>
+  </div>
+
+  <div class="js-yarn-list"></div>
   <!--<div class="background-image"></div>
   <div class="header">
     <div class="logo"></div>
